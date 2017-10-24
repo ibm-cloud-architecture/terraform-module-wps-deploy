@@ -1,7 +1,7 @@
 ## Actions that has to be taken on all nodes in the cluster
 
 ## Actions that needs to be taken on boot master only
-resource "null_resource" "icp-boot" {
+resource "null_resource" "wps" {
 
   # The first master is always the boot master where we run provisioning jobs from
   connection {
@@ -13,7 +13,7 @@ resource "null_resource" "icp-boot" {
   
   provisioner "remote-exec" {
     inline = [
-      "touch /tmp/banana"
+      "/opt/IBM/WebSphere/wp_profile/bin/startServer.sh WebSphere_Portal"
     ]
   }
 }

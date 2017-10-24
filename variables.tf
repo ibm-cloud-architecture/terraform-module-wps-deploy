@@ -1,5 +1,5 @@
 variable "wps" { 
-  description =  "IP address of WPS.""
+  description =  "IP address of WPS."
 }
 
 variable "ssh_user" {

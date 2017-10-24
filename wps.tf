@@ -5,7 +5,7 @@ resource "null_resource" "icp-boot" {
 
   # The first master is always the boot master where we run provisioning jobs from
   connection {
-    host = "${element(var.wps, 0)}"
+    host = "${var.wps}"
     user = "${var.ssh_user}"
     private_key = "${file(var.ssh_key)}"
   } 

@@ -7,7 +7,7 @@ resource "null_resource" "wps" {
   connection {
     host = "${var.wps}"
     user = "${var.ssh_user}"
-    private_key = "${tls_private_key.ssh.private_key_pem}"
+    private_key = "${var.ssh_key}"
   } 
 
   

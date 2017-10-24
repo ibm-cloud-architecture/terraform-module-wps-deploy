@@ -12,8 +12,4 @@ variable "ssh_key" {
   default     = "~/.ssh/id_rsa"
 }
 
-variable "generate_key" {
-  description = "Whether to generate a new ssh key for use by ICP Boot Master to communicate with other nodes"
-  default     = false
-}
 
